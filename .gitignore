@@ -3,6 +3,7 @@
 
 # directories
 /tmp
+./Rproj.user
 
 # wildcards
 *.log
