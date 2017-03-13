@@ -18,12 +18,12 @@ for (i in 1: length(melt1)) {
 multbars=function(x)
   {
   #title=names(melt1)[i]
-  plot1=barplot(type~x, main = "title[i]", xlab="efg")
+  #plot1=barplot(type~x, main = "title[i]", xlab="efg")
   #return(plot1)
   for (i in 1: length(melt1)) {
-    title[i]=(names(melt1)[i])
-  }
-  return(plot1)
+    print (names(melt1)[i])
+    }
+  #return(title)
 }
 
 lapply(melt1, multbars)
@@ -82,6 +82,13 @@ counts <- table(mtcars$gear)
 barplot(counts, main="Car Distribution",
         xlab="Number of Gears")
 
+### data validation
+### identical function does not work with list objects
+### unlist list objects and compare with using identical function
+identical(meltest1, meltest2)
+abc=unlist(meltest1)
+efg=unlist(meltest2)
+identical(abc,efg)
 
 
 
